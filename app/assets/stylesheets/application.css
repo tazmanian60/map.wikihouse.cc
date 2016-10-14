@@ -10,6 +10,32 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require normalize
+ *= require leaflet
  *= require_tree .
  *= require_self
  */
+
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+}
+
+#map {
+  flex: 1;
+  height: 100vh;
+  display: block;
+}
+
+#container {
+  display: flex;
+}
+
+#sidebar {
+  width: 200px;
+  padding: 10px;
+  background: #f0f0f0;
+}

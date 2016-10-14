@@ -1,3 +1,11 @@
-<h1>Hello <%= @user %>!</h1>
-
-<%= link_to "sign out", signout_path %>
+<div id="container">
+<div id="map"></div>
+<div id="sidebar">
+  <% if current_user %>
+    <h2><%= current_user %></h2>
+    <%= link_to "sign out", "/signout" %>
+  <% else %>
+    <%= link_to "sign in", '/auth/sign_in_with_slack' %>
+  <% end %>
+</div>
+</div>
