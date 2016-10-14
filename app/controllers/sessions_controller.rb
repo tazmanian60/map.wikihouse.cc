@@ -1,6 +1,13 @@
 class SessionsController < ApplicationController
+
   def create
-    p request.env["omniauth.auth"].inspect
-    render plain: request.env["omniauth.auth"]
+    session[:user] = request.env["omniauth.auth"]["info"]["nickname"]
+    redirect_to root_path
   end
+
+  def destroy
+    session[:user] = nil
+    redirect_to root_path
+  end
+
 end
