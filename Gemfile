@@ -26,6 +26,8 @@ gem 'simple_form'
 gem 'slack-notifier'
 gem 'pundit'
 gem 'workflow'
+gem 'rack-cors', :require => 'rack/cors'
+
 group :production do
   gem 'rails_12factor'
 end
