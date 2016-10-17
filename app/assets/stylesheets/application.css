@@ -12,9 +12,12 @@
  *
  *= require normalize
  *= require leaflet
+ *= require Leaflet.Instagram
+ *= require MarkerCluster
+ *= require MarkerCluster.Default
+ *= require font-awesome
  *= require_tree .
  *= require_self
- *= require font-awesome
  */
 
 * {

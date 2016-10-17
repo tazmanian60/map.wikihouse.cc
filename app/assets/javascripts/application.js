@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require reqwest
 //= require leaflet
+//= require Leaflet.Instagram
 //= require_tree .
