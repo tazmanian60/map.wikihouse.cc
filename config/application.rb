@@ -18,5 +18,10 @@ module WikihouseMap
       end
     end
 
+    # http://www.seanbehan.com/how-to-enable-iframe-support-on-heroku-with-ruby-on-rails-and-sinatra
+    config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'ALLOWALL'
+    }
+
   end
 end
