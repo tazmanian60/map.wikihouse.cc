@@ -1,0 +1,2 @@
+class Organisation < Place
+end

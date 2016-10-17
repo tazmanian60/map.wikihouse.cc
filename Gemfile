@@ -21,7 +21,10 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-
+gem 'simple_form'
+gem 'slack-notifier'
+gem 'pundit'
+gem 'workflow'
 group :production do
   gem 'rails_12factor'
 end
