@@ -6,7 +6,7 @@
     <li><h2><%= current_user %></h2></li>
     <li><%= link_to "sign out", "/signout" %></li>
   <% else %>
-    <li><%= link_to "sign in", '/auth/sign_in_with_slack' %></li>
+    <li><%= link_to "sign in", '/auth/slack' %></li>
   <% end %>
   <% if policy(Place).create? %>
     <li><%= link_to "Add a place", new_place_path %></li>

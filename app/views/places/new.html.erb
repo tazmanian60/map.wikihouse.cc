@@ -1,3 +1,32 @@
+<div class="container">
+<h1><%= link_to "Map", root_path %> / Add a Place</h1>
+
+<h2>1. What would you like to add to the map?</h2>
+
+<div class="flex-container">
+<div>
+  <div class="button">
+    <%= fa_stacked_icon "user", base: "square", text: 'Individual' %>
+    <p>Individuals who are developing or building a WikiHouse and want to connect with other individuals in their area.</p>
+  </div>
+</div>
+<div>
+  <div class="button">
+    <%= fa_stacked_icon "group", base: "square", text: 'Organisation' %>
+    <p>For community organisations and small to medium business that are developing or building using any WikiHouse system and want to be connected with other opportunities and individuals.</p>
+  </div>
+</div>
+<div>
+  <div class="button">
+    <%= fa_stacked_icon "home", base: "square", text: 'Build' %>
+    <p>Of course this is for people who have reached a stage where they have created either a model or a full scale prototype or pilot. Please include website or social media urls, links to files and details of core members involved in the project. If you have a completed build please also DM us on Twitter and we will add you to our directory of builds.</p>
+  </div>
+</div>
+</div>
+
+<h2>2. Please add details</h2>
+
+
 <%= simple_form_for @place do |f| %>
   <%= f.input :name %>
   <%= f.input :lat %>
@@ -8,3 +37,7 @@
   <%= f.input :url %>
   <%= f.submit %>
 <% end %>
+
+
+
+</div>
