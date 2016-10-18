@@ -116,3 +116,17 @@ fieldset {
 legend {
   color: #aaa;
 }
+
+#geocomplete-map {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  padding: 4px 6px;
+}
+
+#place_address {
+  width: 100%;
+}

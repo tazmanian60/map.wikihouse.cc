@@ -2,15 +2,15 @@
 <div id="map"></div>
 <div id="sidebar">
   <ul>
-  <% if current_user %>
-    <li><h2><%= current_user %></h2></li>
-    <li><%= link_to "sign out", "/signout" %></li>
-  <% else %>
-    <li><%= link_to "sign in", '/auth/slack' %></li>
-  <% end %>
-  <% if policy(Place).create? %>
-    <li><%= link_to "Add a place", new_place_path %></li>
-  <% end %>
+    <% if current_user %>
+      <li><h2><%= current_user %></h2></li>
+      <li><%= link_to "sign out", "/signout" %></li>
+    <% else %>
+      <li><%= link_to "sign in", '/auth/slack' %></li>
+    <% end %>
+    <% if policy(Place).create? %>
+      <li><%= link_to fa_icon("plus", text: "Add a place"), new_place_path %></li>
+    <% end %>
   </ul>
 </div>
 </div>

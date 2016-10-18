@@ -1,54 +1,58 @@
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+
 <div class="container">
-<h1><%= link_to "Map", root_path %> / Add a Place</h1>
 
-<h2>1. What would you like to add to the map?</h2>
+  <h1><%= link_to "Map", root_path %> / Add a Place</h1>
 
-<div class="flex-container">
-<div>
-  <div class="button">
-    <%= fa_stacked_icon "user", base: "square", text: 'Individual' %>
-    <p>Individuals who are developing or building a WikiHouse and want to connect with other individuals in their area.</p>
+  <h2>1. What would you like to add to the map?</h2>
+
+  <div class="flex-container">
+    <div>
+      <div class="button">
+        <%= fa_stacked_icon "user", base: "square", text: 'Individual' %>
+        <p>Individuals who are developing or building a WikiHouse and want to connect with other individuals in their area.</p>
+      </div>
+    </div>
+    <div>
+      <div class="button">
+        <%= fa_stacked_icon "group", base: "square", text: 'Organisation' %>
+        <p>For community organisations and small to medium business that are developing or building using any WikiHouse system and want to be connected with other opportunities and individuals.</p>
+      </div>
+    </div>
+    <div>
+      <div class="button">
+        <%= fa_stacked_icon "home", base: "square", text: 'Build' %>
+        <p>Of course this is for people who have reached a stage where they have created either a model or a full scale prototype or pilot. Please include website or social media urls, links to files and details of core members involved in the project. If you have a completed build please also DM us on Twitter and we will add you to our directory of builds.</p>
+      </div>
+    </div>
   </div>
-</div>
-<div>
-  <div class="button">
-    <%= fa_stacked_icon "group", base: "square", text: 'Organisation' %>
-    <p>For community organisations and small to medium business that are developing or building using any WikiHouse system and want to be connected with other opportunities and individuals.</p>
-  </div>
-</div>
-<div>
-  <div class="button">
-    <%= fa_stacked_icon "home", base: "square", text: 'Build' %>
-    <p>Of course this is for people who have reached a stage where they have created either a model or a full scale prototype or pilot. Please include website or social media urls, links to files and details of core members involved in the project. If you have a completed build please also DM us on Twitter and we will add you to our directory of builds.</p>
-  </div>
-</div>
-</div>
 
-<h2>2. Please add details</h2>
+  <h2>2. Please add details</h2>
 
+  <%= simple_form_for @place do |f| %>
+    <fieldset>
+      <legend>Basic Details</legend>
+      <%= f.input :name %>
+      <%= f.input :description %>
+    </fieldset>
 
-<%= simple_form_for @place do |f| %>
-<fieldset>
-  <legend>Basic Details</legend>
-  <%= f.input :name %>
-  <%= f.input :description %>
-</fieldset>
+    <fieldset>
+      <legend>Location</legend>
+      <%= f.input :address, as: :string %>
+      <div id="geocomplete-map"></div>
+      <%= f.input :lat %>
+      <%= f.input :lng %>
+    </fieldset>
 
-<fieldset>
-  <legend>Location</legend>
-  <%= f.input :address %>
-  <%= f.input :lat %>
-  <%= f.input :lng %>
-</fieldset>
+    <fieldset>
+      <legend>Contact Details</legend>
+      <%= f.input :phone %>
+      <%= f.input :url %>
+    </fieldset>
 
-<fieldset>
-  <legend>Contact Details</legend>
-  <%= f.input :phone %>
-  <%= f.input :url %>
-</fieldset>
-  <%= f.submit %>
-<% end %>
+    <%= f.submit %>
+  <% end %>
 
-
+  <h2>3. Anything else you'd like to add?</h2>
 
 </div>
