@@ -100,3 +100,19 @@ ul, li {
   width: 100px;
   max-width: 10%;
 }
+
+form {
+  background: #FFF;
+  padding: 1em;
+  vertical-align: top;
+  margin-bottom: 1em;
+}
+
+fieldset {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+legend {
+  color: #aaa;
+}

@@ -1,3 +1,7 @@
 <h1><%= @place %></h1>
 
 <%= simple_format @place.description %>
+
+<% if @place.new? %>
+Thanks for submitting your project, it is now being reviewed.
+<% end %>

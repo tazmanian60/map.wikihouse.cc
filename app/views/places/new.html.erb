@@ -28,13 +28,24 @@
 
 
 <%= simple_form_for @place do |f| %>
+<fieldset>
+  <legend>Basic Details</legend>
   <%= f.input :name %>
+  <%= f.input :description %>
+</fieldset>
+
+<fieldset>
+  <legend>Location</legend>
+  <%= f.input :address %>
   <%= f.input :lat %>
   <%= f.input :lng %>
-  <%= f.input :address %>
-  <%= f.input :description %>
+</fieldset>
+
+<fieldset>
+  <legend>Contact Details</legend>
   <%= f.input :phone %>
   <%= f.input :url %>
+</fieldset>
   <%= f.submit %>
 <% end %>
 
