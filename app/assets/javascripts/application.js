@@ -17,4 +17,5 @@
 //= require leaflet
 //= require jquery.geocomplete
 //= require Leaflet.Instagram
+//= require leaflet.ajax
 //= require_tree .
