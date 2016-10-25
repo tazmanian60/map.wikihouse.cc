@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy'
   get 'terms', to: 'static#terms'
 
-  resources :places
+  resources :places do
+    member do
+      patch 'transition'
+    end
+  end
+
     resources :individuals
     resources :organisations
     resources :builds

@@ -25,6 +25,12 @@ class PlacesController < ApplicationController
     end
   end
 
+  def transition
+    @place = Place.find(params[:id])
+    @place.send(params[:state_name] + "!")
+    redirect_to :back
+  end
+
   private
 
     def place_params
