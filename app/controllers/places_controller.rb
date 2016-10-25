@@ -9,12 +9,12 @@ class PlacesController < ApplicationController
   end
 
   def new
-    @place = Place.new
+    @place = klass.new
     authorize @place
   end
 
   def create
-    @place = Place.new(place_params)
+    @place = klass.new(place_params)
     authorize @place
     if @place.save
       notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
@@ -28,7 +28,11 @@ class PlacesController < ApplicationController
   private
 
     def place_params
-      params.require(:place).permit!
+      params.require(controller_name.singularize).permit!
+    end
+
+    def klass
+      controller_name.singularize.classify.constantize
     end
 
 end

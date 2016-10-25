@@ -65,8 +65,12 @@ div.flex-container > div {
 .container {
   max-width: 900px;
   margin: 0 auto;
-  height: 100vh;
+  /*height: 100vh;*/
   display: block;
+}
+
+.active .button {
+  background: red;
 }
 
 .button {
@@ -142,4 +146,8 @@ input.button {
   width: auto;
   padding: 10px 14px;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }

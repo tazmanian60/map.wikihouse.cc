@@ -23,4 +23,8 @@ class Place < ApplicationRecord
     name
   end
 
+  def self.policy_class
+    PlacePolicy
+  end
+
 end
