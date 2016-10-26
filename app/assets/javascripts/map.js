@@ -18,30 +18,39 @@ document.addEventListener("turbolinks:load", function() {
     var mapLayerGroups = [];
     // map.once('focus', function() { map.scrollWheelZoom.enable(); });
 
-
     // places layer
 
     var geoJSONOptions = {
-      onEachFeature: onEachFeature,
-      filter: onEachFilter
+      onEachFeature: onEachFeature
+      // filter: onEachFilter
     }
+
+    // L.Util.ajax("/places.json").then(function(data){
+    //   var geojsonLayer = new L.GeoJSON.AJAX(data, geoJSONOptions)
+    // });
 
     var geojsonLayer = new L.GeoJSON.AJAX("/places.json", geoJSONOptions)
 
-    // var places = geojsonLayer.refilter(function(feature){
-    //     return feature.properties.amenity === "Place";
+    // geojsonLayer.refilter(function(feature){
+    //   return feature.properties.amenity === "Place";
     // });
+
+    var list = ['Individual', 'Organisation', 'Build']
+    for (var i = 0; i < list.length; i++) {
+      mapLayerGroups[list[i]] = new L.layerGroup();
+      mapLayerGroups[list[i]].addTo(map)
+    }
 
     function onEachFeature(feature, layer) {
       var lg = mapLayerGroups[feature.properties.amenity];
       if (lg === undefined) {
         lg = new L.layerGroup();
-        //add the layer to the map
         lg.addTo(map);
-        //store layer
         mapLayerGroups[feature.properties.amenity] = lg;
       }
       lg.addLayer(layer);
+
+      console.log(mapLayerGroups['Individual'])
 
       if (feature.properties && feature.properties.popupContent) {
         layer.bindPopup(feature.properties.popupContent);
@@ -58,13 +67,14 @@ document.addEventListener("turbolinks:load", function() {
     var instagram = L.instagram('https://api.instagram.com/v1/tags/wikihouse/media/recent?access_token=4049407803.79d3ccb.d1b78cc92ebc414389bf720278f87da1')
     instagram.addTo(map)
 
-
     var baseLayers = {
       // "Mapbox": mapbox
     };
     var overlays = {
       "Instagram Photos": instagram,
-      "Places": geojsonLayer
+      "Individuals": mapLayerGroups['Individual'],
+      "Organisations": mapLayerGroups['Organisation'],
+      "Builds": mapLayerGroups['Build']
     };
     L.control.layers(baseLayers, overlays).addTo(map);
   }
