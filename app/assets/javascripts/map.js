@@ -70,7 +70,7 @@ document.addEventListener("turbolinks:load", function() {
 
     // instagram layer
     var instagram = L.instagram('https://api.instagram.com/v1/tags/wikihouse/media/recent?access_token=4049407803.79d3ccb.d1b78cc92ebc414389bf720278f87da1')
-    instagram.addTo(map)
+    // instagram.addTo(map)
 
     var baseLayers = {
       // "Mapbox": mapbox
