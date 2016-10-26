@@ -18,28 +18,34 @@ document.addEventListener("turbolinks:load", function() {
     var mapLayerGroups = [];
     // map.once('focus', function() { map.scrollWheelZoom.enable(); });
 
-    // places layer
-
-    var geoJSONOptions = {
-      onEachFeature: onEachFeature
-      // filter: onEachFilter
-    }
-
-    // L.Util.ajax("/places.json").then(function(data){
-    //   var geojsonLayer = new L.GeoJSON.AJAX(data, geoJSONOptions)
-    // });
-
-    var geojsonLayer = new L.GeoJSON.AJAX("/places.json", geoJSONOptions)
-
-    // geojsonLayer.refilter(function(feature){
-    //   return feature.properties.amenity === "Place";
-    // });
-
     var list = ['Individual', 'Organisation', 'Build']
     for (var i = 0; i < list.length; i++) {
       mapLayerGroups[list[i]] = new L.layerGroup();
       mapLayerGroups[list[i]].addTo(map)
     }
+
+    // places layer
+
+    L.Util.ajax("/places.json").then(function(data){
+      // var geojsonLayer = new L.GeoJSON.AJAX(data, geoJSONOptions)
+      var geojsonLayer = new L.GeoJSON(data, {
+        onEachFeature: onEachFeature,
+        pointToLayer: function(feature, latlng) {
+          var greenIcon = L.icon({
+            iconUrl: '/' + feature.properties.amenity + '.png',
+            // shadowUrl: 'leaf-shadow.png',
+            iconSize:     [20, 30],
+            // shadowSize:   [50, 64],
+            iconAnchor:   [10, 30],
+            // shadowAnchor: [4, 62],
+            popupAnchor:  [0, -30]
+          });
+          return L.marker(latlng, {icon: greenIcon});
+        }
+      })
+    });
+    // var geojsonLayer = new L.GeoJSON.AJAX("/places.json", geoJSONOptions)
+
 
     function onEachFeature(feature, layer) {
       var lg = mapLayerGroups[feature.properties.amenity];
@@ -50,18 +56,17 @@ document.addEventListener("turbolinks:load", function() {
       }
       lg.addLayer(layer);
 
-      console.log(mapLayerGroups['Individual'])
+      console.log(layer)
 
       if (feature.properties && feature.properties.popupContent) {
         layer.bindPopup(feature.properties.popupContent);
       }
     }
 
-    function onEachFilter(feature, layer) {
-      return true;
-      // return feature.properties.amenity == "Place";
-    }
-
+    // function onEachFilter(feature, layer) {
+    //   return true;
+    //   // return feature.properties.amenity == "Place";
+    // }
 
     // instagram layer
     var instagram = L.instagram('https://api.instagram.com/v1/tags/wikihouse/media/recent?access_token=4049407803.79d3ccb.d1b78cc92ebc414389bf720278f87da1')
