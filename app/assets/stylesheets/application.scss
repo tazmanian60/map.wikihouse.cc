@@ -84,11 +84,6 @@ div.input {
   margin-bottom: 1em;
 }
 
-label {
-  width: 200px;
-  display: inline-block;
-}
-
 
 ul, li {
   list-style: none;
@@ -115,6 +110,26 @@ form {
 fieldset {
   margin-bottom: 1em;
   padding: 1em;
+
+  input, textarea {
+    padding: 4px 6px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  input.button {
+    padding: 2px;
+    border: none;
+    border-radius: 4px;
+    width: auto;
+    padding: 10px 14px;
+    cursor: pointer;
+  }
+
+  label {
+    width: 200px;
+    display: inline-block;
+  }
 }
 
 legend {
@@ -129,24 +144,12 @@ legend {
   border: 1px solid #E8E8E8;
 }
 
-input, textarea {
-  padding: 4px 6px;
-  display: inline-block;
-  width: 100%;
-}
 
 #place_address {
   width: 100%;
 }
 
-input.button {
-  padding: 2px;
-  border: none;
-  border-radius: 4px;
-  width: auto;
-  padding: 10px 14px;
-  cursor: pointer;
-}
+
 
 a {
   text-decoration: none;
