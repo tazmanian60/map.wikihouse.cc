@@ -4,7 +4,7 @@ json.array!(@places) do |place|
   json.properties do
     json.name place.name
     json.amenity place.class.to_s
-    json.popupContent place.description
+    json.description place.description
   end
 
   json.geometry do
