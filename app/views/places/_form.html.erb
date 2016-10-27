@@ -1,17 +1,16 @@
 <div class="container" id="form">
-
-  <h2>2. Please add details</h2>
-
   <%= simple_form_for @place do |f| %>
+
+    <h2>2. Please add details</h2>
     <fieldset>
       <legend>Basic Details</legend>
-      <%= f.input :name, autofocus: true %>
+      <%= f.input :name, autofocus: true, label: "#{@place.class}'s Name" %>
       <%= f.input :description %>
     </fieldset>
 
     <fieldset>
       <legend>Location</legend>
-      <%= f.input :address, as: :string, input_html: { id: 'place_address' } %>
+      <%= f.input :address, as: :string, input_html: { id: 'place_address' }, label: "#{@place.class}'s Address" %>
       <div id="geocomplete-map"></div>
       <%= f.input :lat, input_html: { id: 'place_lat' }, as: :hidden %>
       <%= f.input :lng, input_html: { id: 'place_lng' }, as: :hidden %>
@@ -23,9 +22,14 @@
       <%= f.input :url %>
     </fieldset>
 
-    <%= f.submit 'Submit Place', class: 'button' %>
-  <% end %>
 
-  <h2>3. Anything else you'd like to add?</h2>
+    <h2>3. Anything else you'd like to add?</h2>
+
+    <fieldset>
+      <%= f.input :notes %>
+    </fieldset>
+
+    <%= f.submit "Submit #{@place.class} for Review", class: 'button' %>
+  <% end %>
 
 </div>

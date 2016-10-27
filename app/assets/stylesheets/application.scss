@@ -24,6 +24,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #6699CC;
+}
+
 html,body {
   height: 100%;
 }
@@ -70,7 +74,12 @@ div.flex-container > div {
 }
 
 .active .button {
-  background: red;
+  &, &:hover {
+    background: #6699CC;
+    i.fa-stack-1x {
+      color: #6699CC;
+    }
+  }
 }
 
 .button {
@@ -78,6 +87,12 @@ div.flex-container > div {
   height: 100%;
   padding: 20px;
   color: #FFF;
+  &:hover {
+    background: darken(#A09E84, 5%);
+    i.fa-stack-1x {
+      color: darken(#A09E84, 5%);
+    }
+  }
 }
 
 div.input {
