@@ -1,5 +1,5 @@
 class Place < ApplicationRecord
-  validates_presence_of :name, :description, :lat, :lng
+  validates_presence_of :name, :lat, :lng
 
   include Workflow
   workflow do

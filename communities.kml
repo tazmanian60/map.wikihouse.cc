@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>WikiHouse Developer Communities - README FIRST</name>
+		<description><![CDATA[Teams and Contributors:<br>The R&D Communities developing the WikiHouse building systems and working on Open Challenges. Please list your name or your groups name and a brief description of your focus.<br><br>Builds and Pilots:<br>Teams that have delivered builds or prototypes using a WikiHouse building system. Please list the project name, brief and core team. Include where necessary.<br><br>(Please include links to files and details of core members involved in the project. If you have a completed build please also DM us on Twitter and we will add you to our directory of builds.)]]></description>
+		<Folder>
+			<name>Teams &amp; Contributors</name>
+			<Placemark>
+				<name>WikiHouse Foundation</name>
+				<description><![CDATA[<img src="https://lh5.googleusercontent.com/FDo22pBtDIUsBt8s7o_OGpv5AR8gRzBovILUlfEQXIM1LNIxAJpuxF0u1BRBTjbWXCJzefg4LNvkTAqgmEByXEoan63YeqIMzpzltc9n860knyft6baKtKKxmbfbikJK" height="200" width="auto" /><br><br>Alastair Parvin, Niki Virdee, Clayton Prest, Harry Knight, John Rees, Stef Woznarowycz<br>@WikiHouse<br>www.wikihouse.cc<br><br><img src="https://lh6.googleusercontent.com/jNhhJM1DeKlXlAmCx2xya8CRLJ37xwXBY4MW30HaPabhovcs15BjzMl5leHDw0rSGQI9EpLgHNUB2CMfJni9h_6YJgnyLYPKzL4T-A2gHkroMZS1JwgG45ZhODLfpNk" height="200" width="auto" /><br><br><img src="https://lh6.googleusercontent.com/sIO9OgcsAJSqI5rs26IDQVS7cjVqGcOumfXP2Gvv-8W6cpmWUZ90DU8oL5UijtFKJSSB9unpaL5hp3JIz9AuAKcCnXzLojwbvRTSnp2BK2dDffkzK0mT808wtjqrj-ko" height="200" width="auto" /><br><br><img src="https://lh6.googleusercontent.com/NSYDapVh4UkEOlfuLSfbniO4fsEVrx27YpY7it20drN7NYopDsw-vB0pZF7j_Yy7zJPBYxM4Lwq3ctwcb-U1Ss7cGGh4b1vKUtzZ5FXovm8quD7pYpITHloUZamkU0vk" height="200" width="auto" />]]></description>
+				<styleUrl>#icon-1733-000000</styleUrl>
+				<ExtendedData>
+					<Data name='gx_media_links'>
+						<value>https://lh5.googleusercontent.com/FDo22pBtDIUsBt8s7o_OGpv5AR8gRzBovILUlfEQXIM1LNIxAJpuxF0u1BRBTjbWXCJzefg4LNvkTAqgmEByXEoan63YeqIMzpzltc9n860knyft6baKtKKxmbfbikJK https://lh6.googleusercontent.com/jNhhJM1DeKlXlAmCx2xya8CRLJ37xwXBY4MW30HaPabhovcs15BjzMl5leHDw0rSGQI9EpLgHNUB2CMfJni9h_6YJgnyLYPKzL4T-A2gHkroMZS1JwgG45ZhODLfpNk https://lh6.googleusercontent.com/sIO9OgcsAJSqI5rs26IDQVS7cjVqGcOumfXP2Gvv-8W6cpmWUZ90DU8oL5UijtFKJSSB9unpaL5hp3JIz9AuAKcCnXzLojwbvRTSnp2BK2dDffkzK0mT808wtjqrj-ko https://lh6.googleusercontent.com/NSYDapVh4UkEOlfuLSfbniO4fsEVrx27YpY7it20drN7NYopDsw-vB0pZF7j_Yy7zJPBYxM4Lwq3ctwcb-U1Ss7cGGh4b1vKUtzZ5FXovm8quD7pYpITHloUZamkU0vk</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-0.1411791,51.5569879,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>WikiHouse in Baltic Street Adventure Playground</name>
+				<description><![CDATA[http://www.eca.ed.ac.uk/architecture-landscape-architecture/news-events/raising-a-wikihouse-in-baltic-street-adventure]]></description>
+				<styleUrl>#icon-1733-0288D1</styleUrl>
+				<Point>
+					<coordinates>-4.2513728999999785,55.8641622,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>WikiHouseBOM
+</name>
+				<description><![CDATA[We research on WikiHouse for the South Asian Monsoon Climate.]]></description>
+				<styleUrl>#icon-1733-0288D1</styleUrl>
+				<Point>
+					<coordinates>72.8724754,19.1160972,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>WikiHouseNZ | Space Craft Systems</name>
+				<description><![CDATA[founded 2011<br>Martin Luff, Danny Squires, Rachael Wood, David Bottomley, Elizabeth Guthrey, Bev Shepherd, Pauline Wayman, John McNeil, Jason Tobin<br>@WikiHouseNZ<br>www.spacecraft.co.nz]]></description>
+				<styleUrl>#icon-1733-0F9D58</styleUrl>
+				<Point>
+					<coordinates>172.6824331,-43.564857,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fountainbridge Canal Side Initiative</name>
+				<description><![CDATA[Twitter - @AkikoMaK<br>https://www.facebook.com/FountainbridgeCommunityPavilion/?fref=ts]]></description>
+				<styleUrl>#icon-1733-0288D1</styleUrl>
+				<Point>
+					<coordinates>-3.188266999999996,55.953252,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Torbjørn W. Engel</name>
+				<description><![CDATA[Employed by vocational college Fagskolen Oslo Akershus, personally interested in WikiHouse, and participant in Interreg VADH project, which will explore the WikiHouse concept for education.]]></description>
+				<styleUrl>#icon-1733-0288D1</styleUrl>
+				<Point>
+					<coordinates>10.8161259,59.927743,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Petaling Jaya</name>
+				<styleUrl>#icon-1733-0288D1-nodesc</styleUrl>
+				<Point>
+					<coordinates>101.59448850000001,3.1278871,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Paul Pangrazzi</name>
+				<description><![CDATA[Residential garage enthusiast. 4'x8' Crawlbot, Shaper Origin, Glowforge]]></description>
+				<styleUrl>#icon-1733-0097A7</styleUrl>
+				<Point>
+					<coordinates>-122.7038956,47.1600734,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Sebastian Stiernborg</name>
+				<description><![CDATA[Maker enthusiast working on getting Stockholm a creative epicenter for people to make ideas real (toolspace.se). Feel free to hit me up for a coffee at sebastian@toolspace.se]]></description>
+				<styleUrl>#icon-1733-0288D1</styleUrl>
+				<Point>
+					<coordinates>18.072381,59.3462326,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kuni Studio</name>
+				<description><![CDATA[Desarrolladores de WikiHouse en Colombia.]]></description>
+				<styleUrl>#icon-1733-0288D1</styleUrl>
+				<Point>
+					<coordinates>-74.06132909999997,4.6616751,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>WikiHouseNL</name>
+				<description><![CDATA[http://www.hollandwikihouse.nl/]]></description>
+				<styleUrl>#icon-1733-0288D1</styleUrl>
+				<Point>
+					<coordinates>4.4733824,52.1557522,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>WikiHouseGER</name>
+				<styleUrl>#icon-1733-0288D1-nodesc</styleUrl>
+				<Point>
+					<coordinates>11.5909088,48.1498749,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rinat Bakiev</name>
+				<description><![CDATA[In the summer of 2017 I want to build a house in Russia. Rinat@bakiev.ru]]></description>
+				<styleUrl>#icon-1517-0288D1</styleUrl>
+				<Point>
+					<coordinates>37.7490234,55.8259733,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Builds and Pilots</name>
+			<Placemark>
+				<name>FarmHouse</name>
+				<description><![CDATA[<img src="https://lh6.googleusercontent.com/tDr0FyCD_E3Nl91L-rNk_x650ckSiunR4DEo1RXEg8zX8sJukHKUr8NmWrPA1sGORGW6N8hBeqNT_-aZj7X1bsPZK_U1ILxyftfAU7KfcQe7tBDJgBF8xSQLY-7C2EigDg" height="200" width="auto" /><br><br>An 3 bedroom ‘agricultural worker’s dwelling’ with a tight budget. We have appointed Architecture 00 to design the first two storey WikiHouse to be lived in.<br>Homeowners - Janet and Martin Mobbs<br>https://awikifarmhouse.wordpress.com/2015/08/05/building-a-plywood-farmhouse/<br><br><img src="https://lh3.googleusercontent.com/CyzASMoMbE1iLTK_Ieow0BjePILOfW6vVVGGDoZbKWzOYFJ_FzIB23jGV1mY2EMLLIGw8GIA6Pn3oZLznnZlE280FiP4pvzgyqsy_b61NiqDSZiEnqo2_6XXYZ3tG36P" height="200" width="auto" /><br><br><img src="https://lh6.googleusercontent.com/Ffd6Ic9XoKwCWUR9IDSUzRsWCO8RMk_K82y8rWwHDK7mXG7O_qmNChvdO1Z5Lmkf4RR2mIW9vK79cb-V9iRFaT6sqRwqExElvUIj4vFI_KNBw78irXq4FddCe5TwTxqG" height="200" width="auto" /><br><br><img src="https://lh6.googleusercontent.com/yw87Z78jvqy-sQnZW5uCttfOZsc01BqQtii-cEpLJcj5T1X2ZMmQdc85wLgAekhL8ELglBoYSQPtjslZZHPHPsYCIOUizcBltm0-kuFv0THRv7FdfUdQRyGnZcwo2wPX" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/elDrRdQ_q2C5hzXTUJaobWOQ6ictjF4OZ-jkH9WRYtt3e9PP3a4T740p_up6oQJVtsHHnEQMEIe6SkUJOB6joR858T89_GS-iEz2k63muL14zQKU9pxvX0DlperI-MI" height="200" width="auto" />]]></description>
+				<styleUrl>#icon-1603-0288D1</styleUrl>
+				<ExtendedData>
+					<Data name='gx_media_links'>
+						<value>https://lh6.googleusercontent.com/tDr0FyCD_E3Nl91L-rNk_x650ckSiunR4DEo1RXEg8zX8sJukHKUr8NmWrPA1sGORGW6N8hBeqNT_-aZj7X1bsPZK_U1ILxyftfAU7KfcQe7tBDJgBF8xSQLY-7C2EigDg https://lh3.googleusercontent.com/CyzASMoMbE1iLTK_Ieow0BjePILOfW6vVVGGDoZbKWzOYFJ_FzIB23jGV1mY2EMLLIGw8GIA6Pn3oZLznnZlE280FiP4pvzgyqsy_b61NiqDSZiEnqo2_6XXYZ3tG36P https://lh6.googleusercontent.com/Ffd6Ic9XoKwCWUR9IDSUzRsWCO8RMk_K82y8rWwHDK7mXG7O_qmNChvdO1Z5Lmkf4RR2mIW9vK79cb-V9iRFaT6sqRwqExElvUIj4vFI_KNBw78irXq4FddCe5TwTxqG https://lh6.googleusercontent.com/yw87Z78jvqy-sQnZW5uCttfOZsc01BqQtii-cEpLJcj5T1X2ZMmQdc85wLgAekhL8ELglBoYSQPtjslZZHPHPsYCIOUizcBltm0-kuFv0THRv7FdfUdQRyGnZcwo2wPX https://lh5.googleusercontent.com/elDrRdQ_q2C5hzXTUJaobWOQ6ictjF4OZ-jkH9WRYtt3e9PP3a4T740p_up6oQJVtsHHnEQMEIe6SkUJOB6joR858T89_GS-iEz2k63muL14zQKU9pxvX0DlperI-MI</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-1.3212776,52.3848203,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>PPES Reading Hut</name>
+				<description><![CDATA[<img src="https://lh5.googleusercontent.com/MIs84pTub-vx099L5bEnRDrp4fHO3juyCucmNX8B8vb9R4AMKidh7ncnN27ryMQf5XNjTUwKRa_rNYTh5B9CJJb8EeVdtN7qSjwwumpnLNmZb2LYJf6rg3sEymcVP1I" height="200" width="auto" /><br><br>PPES Reading Hut is an outdoor facility for learning and activity in Pei Pin Elementary School (http://www.ppes.hcc.edu.tw), Hsinpu Township, Hsinchu County, Taiwan. It had been partially assembled and exhibited in the Digital Art Festival Taipei 2015 (http://digitalartfestival.tw/daf15/en/exhibition-1.html). Then it was moved to the school for pre-built treatment and preparation. The final construction was done in the Summer of 2016 with the helps from teachers and students of PPES, volunteers, and local residents.<br><br>The PPES Reading Hut was collaboratively designed and built by the following partners:<br>- Association of Humanitarian Architecture (AHA), Taiwan (http://www.aha.tw)<br>- Humanitarian Architecture Lab & the Graduate Institute of Architecture, National Chiao Tung University (http://www.arch.nctu.edu.tw)<br>- Fablab Dynamic, Taipei (http://www.fablabtaiwan.org.tw)<br><br><img src="https://lh3.googleusercontent.com/ff_pwsJrKcukib-1qGaW9X5DL0Ms39rjXR51b6xh9u_NcY-F3eA-uobenhmU2C5HfH7sWLtdGIstnCcuCxjkdAXH7qZ5DPc7LovaSMzEoCem5hj9vsVT4QsQJHMCBEj2Gw" height="200" width="auto" /><br><br><img src="https://lh3.googleusercontent.com/T0KZ9IbQLU3u7_LKKo3bp8KKi4j1jgP_xZwF-g4CCnpAbMPpuMG-5iB5XfG3vRk3RtcIkzsW9UexQuW5noP2AmaNMSOEbOPBfnU4F6tu4CJrBZ_buqAGFKMGa_H67X9T" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/C1u7Vh8FTGRAv2u1kjiCq3dAg-kvycvRaBxWnhlo93a99IzRWh2N5TSzzNNdFMP-xV7UvihsxJn0vJKBVZ_zaMgUFfaoOdOF3_UJzdFizOkociztj15wg72272bzznDQ" height="200" width="auto" /><br><br><img src="https://lh5.googleusercontent.com/GlLQyzN_rd8YzKArW4DhwejPDDmSvCF2SLRKH7bmEEIv8680c7p1pBz9Y50wLGv2LAodRvLr8jA_kPvKNUuqCeqfrIKkOqkbOMJ_WRMheNpGQ-Dpp5wtK5VJmvpmLik" height="200" width="auto" /><br><br><img src="https://lh4.googleusercontent.com/-XPNekCbJ0kYHkfH05YJtyYlt4n7x23QdD7-E75vq9IkEhqoy8jrbboBBml_fBrUcNzrZTK3TdwR_AXN2mY22yoxWOrran9JBfBmYWvCQ8Ue-_wCR-VWCXilxOI40KBxAQ" height="200" width="auto" />]]></description>
+				<styleUrl>#icon-1603-A52714</styleUrl>
+				<ExtendedData>
+					<Data name='gx_media_links'>
+						<value>https://lh5.googleusercontent.com/MIs84pTub-vx099L5bEnRDrp4fHO3juyCucmNX8B8vb9R4AMKidh7ncnN27ryMQf5XNjTUwKRa_rNYTh5B9CJJb8EeVdtN7qSjwwumpnLNmZb2LYJf6rg3sEymcVP1I https://lh3.googleusercontent.com/ff_pwsJrKcukib-1qGaW9X5DL0Ms39rjXR51b6xh9u_NcY-F3eA-uobenhmU2C5HfH7sWLtdGIstnCcuCxjkdAXH7qZ5DPc7LovaSMzEoCem5hj9vsVT4QsQJHMCBEj2Gw https://lh3.googleusercontent.com/T0KZ9IbQLU3u7_LKKo3bp8KKi4j1jgP_xZwF-g4CCnpAbMPpuMG-5iB5XfG3vRk3RtcIkzsW9UexQuW5noP2AmaNMSOEbOPBfnU4F6tu4CJrBZ_buqAGFKMGa_H67X9T https://lh5.googleusercontent.com/C1u7Vh8FTGRAv2u1kjiCq3dAg-kvycvRaBxWnhlo93a99IzRWh2N5TSzzNNdFMP-xV7UvihsxJn0vJKBVZ_zaMgUFfaoOdOF3_UJzdFizOkociztj15wg72272bzznDQ https://lh5.googleusercontent.com/GlLQyzN_rd8YzKArW4DhwejPDDmSvCF2SLRKH7bmEEIv8680c7p1pBz9Y50wLGv2LAodRvLr8jA_kPvKNUuqCeqfrIKkOqkbOMJ_WRMheNpGQ-Dpp5wtK5VJmvpmLik https://lh4.googleusercontent.com/-XPNekCbJ0kYHkfH05YJtyYlt4n7x23QdD7-E75vq9IkEhqoy8jrbboBBml_fBrUcNzrZTK3TdwR_AXN2mY22yoxWOrran9JBfBmYWvCQ8Ue-_wCR-VWCXilxOI40KBxAQ</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>121.0860541,24.8525356,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Style id='icon-1517-0288D1-normal'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1517-0288D1-highlight'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1517-0288D1'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1517-0288D1-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1517-0288D1-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1603-0288D1-normal'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1603-0288D1-highlight'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1603-0288D1'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1603-0288D1-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1603-0288D1-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1603-A52714-normal'>
+			<IconStyle>
+				<color>ff1427A5</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1603-A52714-highlight'>
+			<IconStyle>
+				<color>ff1427A5</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1603-A52714'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1603-A52714-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1603-A52714-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1733-000000-normal'>
+			<IconStyle>
+				<color>ff000000</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1733-000000-highlight'>
+			<IconStyle>
+				<color>ff000000</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1733-000000'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1733-000000-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1733-000000-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1733-0097A7-normal'>
+			<IconStyle>
+				<color>ffA79700</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1733-0097A7-highlight'>
+			<IconStyle>
+				<color>ffA79700</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1733-0097A7'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1733-0097A7-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1733-0097A7-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1733-0288D1-normal'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1733-0288D1-highlight'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1733-0288D1'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1733-0288D1-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1733-0288D1-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1733-0288D1-nodesc-normal'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1733-0288D1-nodesc-highlight'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1733-0288D1-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1733-0288D1-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1733-0288D1-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1733-0F9D58-normal'>
+			<IconStyle>
+				<color>ff589D0F</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1733-0F9D58-highlight'>
+			<IconStyle>
+				<color>ff589D0F</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1733-0F9D58'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1733-0F9D58-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1733-0F9D58-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
