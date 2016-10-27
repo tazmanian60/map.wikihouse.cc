@@ -9,6 +9,6 @@ json.array!(@places) do |place|
 
   json.geometry do
     json.type "Point"
-    json.coordinates [place.lng,place.lat]
+    json.coordinates place.safe_latlng.reverse
   end
 end

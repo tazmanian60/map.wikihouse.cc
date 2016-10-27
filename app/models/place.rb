@@ -27,4 +27,11 @@ class Place < ApplicationRecord
     PlacePolicy
   end
 
+  def safe_latlng(precision=2)
+    # https://en.wikipedia.org/wiki/Decimal_degrees#Precision
+    # 2: ~ 500m-1km precision
+    # 3: ~ 50-100m precision
+    [lat,lng].map{|f| sprintf("%.#{precision}f", f)}
+  end
+
 end
