@@ -56,7 +56,7 @@ document.addEventListener("turbolinks:load", function() {
       }
       lg.addLayer(layer);
 
-      console.log(layer)
+      // console.log(layer)
 
       if (feature.properties && feature.properties.name) {
         var str = "<h1>" + feature.properties.name + "</h1>"
