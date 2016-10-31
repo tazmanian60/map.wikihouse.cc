@@ -18,7 +18,7 @@ class PlacesController < ApplicationController
     authorize @place
     if @place.save
       notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
-      notifier.ping "New place added to map #{place_url(@place)}"
+      notifier.ping "#{@place.name} (#{@place.type}) added #{place_url(@place)}?review=1"
       redirect_to @place, notice: "Place added"
     else
       render :new
