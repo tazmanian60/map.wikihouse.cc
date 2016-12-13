@@ -1,7 +1,8 @@
 class PlacePolicy < ApplicationPolicy
 
   def create?
-    user
+    # user
+    true
   end
 
 end

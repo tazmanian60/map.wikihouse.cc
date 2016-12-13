@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161027145513) do
+ActiveRecord::Schema.define(version: 20161213181502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20161027145513) do
     t.string   "workflow_state"
     t.text     "notes"
     t.text     "images"
+    t.jsonb    "data"
     t.index ["type"], name: "index_places_on_type", using: :btree
     t.index ["workflow_state"], name: "index_places_on_workflow_state", using: :btree
   end
