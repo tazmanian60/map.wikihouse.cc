@@ -61,7 +61,7 @@ document.addEventListener("turbolinks:load", function() {
       if (feature.properties && feature.properties.name) {
         var str = "<h1>" + feature.properties.name + "</h1>"
         if (feature.properties.description) {
-          str += "<p>" + feature.properties.description + "</p>";
+          str += "<p>" + feature.properties.description.autoLink() + "</p>";
         }
         layer.bindPopup(str);
       }

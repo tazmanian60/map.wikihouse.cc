@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require reqwest
 //= require leaflet
+//= require autolink
 //= require jquery.geocomplete
 //= require Leaflet.Instagram
 //= require leaflet.ajax

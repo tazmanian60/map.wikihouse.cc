@@ -1,0 +1,9 @@
+
+.leaflet-popup-content {
+  max-height: 350px;
+  overflow-y: auto;
+  &,* {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+}
