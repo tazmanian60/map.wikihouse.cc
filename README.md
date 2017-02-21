@@ -1,24 +1,41 @@
-# README
+# map.wikihouse.cc
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The community map for [WikiHouse](https://wikihouse.cc)
 
-Things you may want to cover:
+## Development setup
 
-* Ruby version
+Prerequisites:
 
-* System dependencies
+* Ruby 2.4.0
+* PostgreSQL
+* Heroku credentials
 
-* Configuration
+Then run `bin/setup`. This script is idempotent, so it can be re-run if
+something fails.
 
-* Database creation
+## Copying production database locally
 
-* Database initialization
+```
+$ dropdb wikihouse-map_development
+$ heroku pg:backups:download
+$ pg_restore --verbose --clean --jobs=4 --disable-triggers --no-acl --no-owner -h localhost -d wikihouse-map latest.dump
+$ rm latest.dump
+```
 
-* How to run the test suite
+## Day-to-day development
 
-* Services (job queues, cache servers, search engines, etc.)
+Run `rails s` to start the web server. You can now visit the site at [http://localhost:3000](http://localhost:3000).
 
-* Deployment instructions
+Run `rspec` to run the tests.
 
-* ...
+## Deploying
+
+The github master branch is auto-linked to heroku, so a simple `git push` will put your code on github and heroku at the same time.
+
+## DNS
+
+Managed by CloudFlare
+
+## Monitoring
+
+The site is periodically pinged by uptimerobot.
