@@ -54,6 +54,7 @@ group :test do
   gem 'capybara'
   gem 'guard-rspec'
   gem 'zonebie'
+  gem 'poltergeist'
 end
 
 group :development do
