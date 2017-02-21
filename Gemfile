@@ -1,3 +1,4 @@
+ruby '2.4.0'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -44,6 +45,15 @@ gem 'omniauth-slack'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'zonebie'
 end
 
 group :development do
