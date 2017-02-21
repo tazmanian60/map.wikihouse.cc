@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'signout', to: 'sessions#destroy'
   get 'terms', to: 'static#terms'
+  get 'thanks', to: 'static#thanks', as: 'thanks'
 
   resources :places do
     member do
@@ -9,10 +10,9 @@ Rails.application.routes.draw do
     end
   end
 
-    resources :individuals
-    resources :organisations
-    resources :builds
-
+  resources :individuals
+  resources :organisations
+  resources :builds
 
   resource :embed
 

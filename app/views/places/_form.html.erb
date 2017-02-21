@@ -4,24 +4,33 @@
     <h2>2. Please add details</h2>
     <fieldset>
       <legend>Basic Details</legend>
-      <%= f.input :name, autofocus: true, label: "#{@place.class}'s Name" %>
-      <%= f.input :description %>
+      <% if @place.class == Individual %>
+        <%= f.input :first_name, autofocus: true %>
+        <%= f.input :last_name %>
+        <%= f.input :role, label: "Role/Job Description" %>
+        <%= f.input :email, as: :email %>
+        <%= f.input :url, label: "URL" %>
+        <%= f.input :description, label: "Your involvement in WikiHouse" %>
+      <% elsif @place.class == Build %>
+        <%= f.input :name, autofocus: true, label: "Build Name" %>
+        <%= f.input :url, label: "URL" %>
+        <%= f.input :description %>
+      <% elsif @place.class == Organisation %>
+        <%= f.input :name, autofocus: true, label: "Organisation Name" %>
+        <%= f.input :url, label: "URL" %>
+        <%= f.input :phone %>
+        <%= f.input :description %>
+      <% end %>
     </fieldset>
 
     <fieldset>
       <legend>Location</legend>
-      <%= f.input :address, as: :string, input_html: { id: 'place_address' }, label: "#{@place.class}'s Address" %>
+      <%= f.input :address, as: :string, input_html: { id: 'place_address' }, label: "#{@place.singular_name} Address" %>
       <div id="geocomplete-map"></div>
+      <p class="hint">You can drag the marker above to position it more accurately</p>
       <%= f.input :lat, input_html: { id: 'place_lat' }, as: :hidden %>
       <%= f.input :lng, input_html: { id: 'place_lng' }, as: :hidden %>
     </fieldset>
-
-    <fieldset>
-      <legend>Contact Details</legend>
-      <%= f.input :phone %>
-      <%= f.input :url %>
-    </fieldset>
-
 
     <h2>3. Anything else you'd like to add?</h2>
 

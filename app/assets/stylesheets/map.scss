@@ -1,0 +1,16 @@
+#map {
+  .leaflet-popup-content {
+    max-height: 300px;
+    overflow-y: auto;
+    &,* {
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+  }
+
+
+  .leaflet-popup-instagram a.leaflet-popup-close-button {
+    width: 25px;
+    height: 25px;
+  }
+}

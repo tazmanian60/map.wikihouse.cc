@@ -35,6 +35,7 @@ html,body {
 body {
   background: #f0f0f0;
   line-height: 1.4;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans;
 }
 
 #map {
@@ -57,8 +58,14 @@ body {
   color: #A09E84;
 }
 
+.padding {
+  padding: 20px;
+}
+
 div.flex-container {
-  display: flex;
+  @media (min-width: 480px) {
+    display: flex;
+  }
 }
 
 div.flex-container > div {
@@ -85,8 +92,9 @@ div.flex-container > div {
 .button {
   background: #A09E84;
   height: 100%;
-  padding: 20px;
+  padding: 10px 20px;
   color: #FFF;
+  border: none;
   &:hover {
     background: darken(#A09E84, 5%);
     i.fa-stack-1x {
@@ -142,7 +150,8 @@ fieldset {
   }
 
   label {
-    width: 200px;
+    width: 100%;
+    max-width: 300px;
     display: inline-block;
   }
 }
@@ -164,8 +173,16 @@ legend {
   width: 100%;
 }
 
-
+span.error {
+  color: red;
+}
 
 a {
   text-decoration: none;
+}
+
+.hint {
+  color: #AAA;
+  margin: 0.5em 0;
+  font-style: italic;
 }
