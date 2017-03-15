@@ -14,20 +14,3 @@ RSpec.describe Place, type: :model do
   end
 
 end
-
-
-[Build, Contributor].each do |klass|
-
-  RSpec.describe klass, type: :model do
-
-    it "is a subclass of Place" do
-      expect(klass.superclass).to eq(Place)
-    end
-
-    it "shares Place's pundit policy" do
-      expect(klass.policy_class).to eq(PlacePolicy)
-    end
-
-  end
-
-end

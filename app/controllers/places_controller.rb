@@ -10,12 +10,10 @@ class PlacesController < ApplicationController
 
   def new
     @place = klass.new
-    authorize @place
   end
 
   def create
     @place = klass.new(place_params)
-    authorize @place
 
     if @place.save
       ChatNotifier.default.place_created(@place)
