@@ -15,14 +15,10 @@ class PlacesController < ApplicationController
 
   def create
     @place = klass.new(place_params)
-
     authorize @place
+
     if @place.save
-      begin
-        notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
-        notifier.ping "#{@place.name} (#{@place.type}) added #{place_url(@place)}?review=1"
-      rescue
-      end
+      ChatNotifier.default.place_created(@place)
       redirect_to thanks_url
     else
       render :new

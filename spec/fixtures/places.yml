@@ -1,0 +1,5 @@
+contributor:
+  type: Contributor
+  name: Foo Bar
+  lat: 42
+  lng: 42

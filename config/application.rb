@@ -23,5 +23,6 @@ module WikihouseMap
       'X-Frame-Options' => 'ALLOWALL'
     }
 
+    config.autoload_paths << "#{config.root}/app"
   end
 end
