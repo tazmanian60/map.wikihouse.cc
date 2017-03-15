@@ -22,9 +22,6 @@ chdir APP_ROOT do
   heading "Setting up Heroku"
   system! "heroku git:remote -a wikihouse-map"
 
-  heading "Fetching env vars"
-  system! 'bin/env'
-
   puts "\n== Copying sample files =="
   unless File.exist?('config/database.yml')
     cp 'config/database.yml.sample', 'config/database.yml'
