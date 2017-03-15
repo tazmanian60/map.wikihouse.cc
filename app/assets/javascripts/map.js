@@ -16,7 +16,6 @@ document.addEventListener("turbolinks:load", function() {
     mapbox.addTo(map)
 
     var mapLayerGroups = [];
-    // map.once('focus', function() { map.scrollWheelZoom.enable(); });
 
     var list = ['Contributor', 'Build']
     for (var i = 0; i < list.length; i++) {
@@ -24,10 +23,7 @@ document.addEventListener("turbolinks:load", function() {
       mapLayerGroups[list[i]].addTo(map)
     }
 
-    // places layer
-
     L.Util.ajax("/places.json").then(function(data){
-      // var geojsonLayer = new L.GeoJSON.AJAX(data, geoJSONOptions)
       var geojsonLayer = new L.GeoJSON(data, {
         onEachFeature: onEachFeature,
         pointToLayer: function(feature, latlng) {
@@ -48,8 +44,6 @@ document.addEventListener("turbolinks:load", function() {
         }
       })
     });
-    // var geojsonLayer = new L.GeoJSON.AJAX("/places.json", geoJSONOptions)
-
 
     function onEachFeature(feature, layer) {
       var lg = mapLayerGroups[feature.properties.amenity];
@@ -60,8 +54,6 @@ document.addEventListener("turbolinks:load", function() {
       }
       lg.addLayer(layer);
 
-      // console.log(layer)
-
       if (feature.properties && feature.properties.name) {
         var str = "<h1>" + feature.properties.name + "</h1>"
         if (feature.properties.description) {
@@ -71,24 +63,15 @@ document.addEventListener("turbolinks:load", function() {
       }
     }
 
-    // function onEachFilter(feature, layer) {
-    //   return true;
-    //   // return feature.properties.amenity == "Place";
-    // }
-
-    // instagram layer
     var instagram = L.instagram('https://api.instagram.com/v1/tags/wikihouse/media/recent?access_token=4049407803.79d3ccb.d1b78cc92ebc414389bf720278f87da1')
-    // instagram.addTo(map)
 
-    var baseLayers = {
-      // "Mapbox": mapbox
-    };
     var overlays = {
       "Instagram Photos": instagram,
       "Contributors": mapLayerGroups['Contributor'],
       "Builds": mapLayerGroups['Build']
     };
-    L.control.layers(baseLayers, overlays).addTo(map);
+
+    L.control.layers({}, overlays).addTo(map);
   }
 
 })
