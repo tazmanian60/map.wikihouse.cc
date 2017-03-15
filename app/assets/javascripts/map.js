@@ -38,6 +38,7 @@ document.addEventListener("turbolinks:load", function() {
             popupAnchor: [0, -33],
             shadowSize: [20, 33],
             shadowAnchor: [20, 22],
+            className: "vector-marker marker-" + feature.properties.amenity,
           });
 
           return L.marker(latlng, {
