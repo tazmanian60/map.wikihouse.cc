@@ -7,28 +7,19 @@
   <div class="flex-container">
 
     <div>
-      <%= link_to new_individual_path + "#form", class: ('active' if request.path == new_individual_path) do %>
+      <%= link_to new_contributor_path, class: ('active' if request.path == new_contributor_path) do %>
         <div class="button">
-          <%= fa_stacked_icon "user", base: "square", text: 'Individual' %>
-          <p>Individuals who are developing or building a WikiHouse and want to connect with other individuals in their area.</p>
+          <%= fa_stacked_icon "group", base: "square", text: 'Contributor' %>
+          <p>Individuals and organisations who are developing or building a WikiHouse</p>
         </div>
       <% end %>
     </div>
 
     <div>
-      <%= link_to new_organisation_path + "#form", class: ('active' if request.path == new_organisation_path) do %>
-        <div class="button">
-          <%= fa_stacked_icon "group", base: "square", text: 'Organisation' %>
-          <p>For community organisations and small to medium business that are developing or building using any WikiHouse system and want to be connected with other opportunities and individuals.</p>
-        </div>
-      <% end %>
-    </div>
-
-    <div>
-      <%= link_to new_build_path + "#form", class: ('active' if request.path == new_build_path) do %>
+      <%= link_to new_build_path, class: ('active' if request.path == new_build_path) do %>
         <div class="button">
           <%= fa_stacked_icon "home", base: "square", text: 'Build' %>
-          <p>Of course this is for people who have reached a stage where they have created either a model or a full scale prototype or pilot. Please include website or social media urls, links to files and details of core members involved in the project. If you have a completed build please also DM us on Twitter and we will add you to our directory of builds.</p>
+          <p>WikiHouse projects which have produced either a model or a full scale prototype or pilot</p>
         </div>
       <% end %>
     </div>

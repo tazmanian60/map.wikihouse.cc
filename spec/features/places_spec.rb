@@ -2,31 +2,32 @@ require 'rails_helper'
 
 describe "places" do
 
-  skip "can be added to the map", js: false do
-
+  example "adding a contributor" do
     visit "/"
     click_link "Add a place"
-    click_link "Individual"
+    click_link "Contributor"
 
-    fill_in "First name", with: "Bart"
-    fill_in "Last name", with: "Simpson"
-    fill_in "Role/Job Description", with: "Student"
-    fill_in "Email", with: "bart@example.com"
+    fill_in "Name", with: "Bart Simpson"
     fill_in "URL", with: "http://example.com"
     fill_in "Your involvement in WikiHouse", with: "helper"
+    fill_in "Address", with: "Springfield, USA"
 
-    # fill_in "place_address", with: "Springfield, USA"
+    page.execute_script "$('#place_address').trigger('geocode')"
+    expect(page).to have_selector("#place_lat") { |field|
+      field.value.present?
+    }
 
-    # save_and_open_page
+    click_button "Submit"
+    expect(page).to have_content("Thanks")
 
-    # these are hidden fields... use JS instead
-      fill_in "#place_lat", with: 39.7638163
-      fill_in "#place_lng", with: -89.7410425
+    place = Place.order("created_at desc").first
+    visit place_path(place, review: true)
 
-    fill_in "Notes", with: "some notes"
-    click_button "Submit Individual for Review"
+    click_button "accept"
+    expect(place.reload).to be_accepted
 
-    expect(page).to have_content "Thank you"
+    visit "/"
+    find(".leaflet-marker-icon").click
   end
 
 end

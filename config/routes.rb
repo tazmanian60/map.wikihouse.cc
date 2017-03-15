@@ -10,8 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :individuals
-  resources :organisations
+  resources :contributors
   resources :builds
 
   resource :embed

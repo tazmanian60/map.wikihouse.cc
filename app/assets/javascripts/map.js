@@ -18,7 +18,7 @@ document.addEventListener("turbolinks:load", function() {
     var mapLayerGroups = [];
     // map.once('focus', function() { map.scrollWheelZoom.enable(); });
 
-    var list = ['Individual', 'Organisation', 'Build']
+    var list = ['Contributor', 'Build']
     for (var i = 0; i < list.length; i++) {
       mapLayerGroups[list[i]] = new L.layerGroup();
       mapLayerGroups[list[i]].addTo(map)
@@ -81,8 +81,7 @@ document.addEventListener("turbolinks:load", function() {
     };
     var overlays = {
       "Instagram Photos": instagram,
-      "Individuals": mapLayerGroups['Individual'],
-      "Organisations": mapLayerGroups['Organisation'],
+      "Contributors": mapLayerGroups['Contributor'],
       "Builds": mapLayerGroups['Build']
     };
     L.control.layers(baseLayers, overlays).addTo(map);

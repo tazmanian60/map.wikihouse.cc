@@ -55,6 +55,7 @@ group :test do
   gem 'guard-rspec'
   gem 'zonebie'
   gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do

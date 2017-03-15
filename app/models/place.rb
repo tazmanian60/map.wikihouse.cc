@@ -1,6 +1,6 @@
 class Place < ApplicationRecord
 
-  validates_presence_of :lat, :lng
+  validates_presence_of :lat, :lng, :name
 
   include Workflow
   workflow do
@@ -33,9 +33,5 @@ class Place < ApplicationRecord
     # 2: ~ 500m-1km precision
     # 3: ~ 50-100m precision
     [lat,lng].map{|f| sprintf("%.#{precision}f", f)}
-  end
-
-  def singular_name
-    self.class.name
   end
 end

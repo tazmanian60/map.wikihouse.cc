@@ -6,10 +6,6 @@ RSpec.describe Place, type: :model do
     it "has a default awaiting_review state" do
       expect(Place.new.current_state).to eq('awaiting_review')
     end
-
-    it "can be accepted from awaiting_review"
-
-    it "can be rejected from awaiting_review"
   end
 
   it "has safe_latlng method to lessen the accuracy on the map" do
@@ -20,7 +16,7 @@ RSpec.describe Place, type: :model do
 end
 
 
-[Build, Individual, Organisation].each do |klass|
+[Build, Contributor].each do |klass|
 
   RSpec.describe klass, type: :model do
 

@@ -15,9 +15,6 @@ class PlacesController < ApplicationController
 
   def create
     @place = klass.new(place_params)
-    
-    # @place.lat = 51
-    # @place.lng = 0.5
 
     authorize @place
     if @place.save
@@ -26,7 +23,7 @@ class PlacesController < ApplicationController
         notifier.ping "#{@place.name} (#{@place.type}) added #{place_url(@place)}?review=1"
       rescue
       end
-      redirect_to thanks_url#, notice: "Place added"
+      redirect_to thanks_url
     else
       render :new
     end
@@ -35,7 +32,7 @@ class PlacesController < ApplicationController
   def transition
     @place = Place.find(params[:id])
     @place.send(params[:state_name] + "!")
-    redirect_to :back
+    redirect_back fallback_location: @place
   end
 
   private

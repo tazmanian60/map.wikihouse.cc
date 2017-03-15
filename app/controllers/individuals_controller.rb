@@ -1,2 +1,0 @@
-class IndividualsController < PlacesController
-end
