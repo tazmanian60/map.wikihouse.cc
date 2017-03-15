@@ -14,9 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require reqwest
-//= require leaflet
+//= require leaflet-src
 //= require autolink
 //= require jquery.geocomplete
 //= require Leaflet.Instagram
 //= require leaflet.ajax
+//= require leaflet-vector-markers
 //= require_tree .

@@ -5,6 +5,7 @@ json.array!(@places) do |place|
     json.name place.name
     json.amenity place.class.to_s
     json.description place.description
+    json.icon place.icon
   end
 
   json.geometry do

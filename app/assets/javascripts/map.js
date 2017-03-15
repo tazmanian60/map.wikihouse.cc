@@ -31,16 +31,19 @@ document.addEventListener("turbolinks:load", function() {
       var geojsonLayer = new L.GeoJSON(data, {
         onEachFeature: onEachFeature,
         pointToLayer: function(feature, latlng) {
-          var greenIcon = L.icon({
-            iconUrl: '/' + feature.properties.amenity + '.png',
-            // shadowUrl: 'leaf-shadow.png',
-            iconSize:     [20, 30],
-            // shadowSize:   [50, 64],
-            iconAnchor:   [10, 30],
-            // shadowAnchor: [4, 62],
-            popupAnchor:  [0, -30]
+          var icon = L.VectorMarkers.icon({
+            icon: feature.properties.icon,
+            iconSize: [20, 33],
+            iconAnchor: [10, 33],
+            popupAnchor: [0, -33],
+            shadowSize: [20, 33],
+            shadowAnchor: [20, 22],
           });
-          return L.marker(latlng, {icon: greenIcon});
+
+          return L.marker(latlng, {
+            icon: icon,
+            title: feature.properties.name,
+          });
         }
       })
     });

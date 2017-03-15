@@ -1,5 +1,4 @@
 class Place < ApplicationRecord
-
   validates_presence_of :lat, :lng, :name
 
   include Workflow
@@ -20,12 +19,20 @@ class Place < ApplicationRecord
     state :accepted
   end
 
-  def to_s
-    name
-  end
-
   def self.policy_class
     PlacePolicy
+  end
+
+  def self.icon
+    raise NotImplementedError, "specify the name of a font-awesome icon"
+  end
+
+  def icon
+    self.class.icon
+  end
+
+  def to_s
+    name
   end
 
   def safe_latlng(precision=2)

@@ -9,7 +9,7 @@
     <div>
       <%= link_to new_contributor_path, class: ('active' if request.path == new_contributor_path) do %>
         <div class="button">
-          <%= fa_stacked_icon "group", base: "square", text: 'Contributor' %>
+          <%= fa_stacked_icon Contributor.icon, base: "square", text: 'Contributor' %>
           <p>Individuals and organisations who are developing or building a WikiHouse</p>
         </div>
       <% end %>
@@ -18,7 +18,7 @@
     <div>
       <%= link_to new_build_path, class: ('active' if request.path == new_build_path) do %>
         <div class="button">
-          <%= fa_stacked_icon "home", base: "square", text: 'Build' %>
+          <%= fa_stacked_icon Build.icon, base: "square", text: 'Build' %>
           <p>WikiHouse projects which have produced either a model or a full scale prototype or pilot</p>
         </div>
       <% end %>

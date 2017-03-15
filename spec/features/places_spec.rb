@@ -27,7 +27,7 @@ describe "places" do
     expect(place.reload).to be_accepted
 
     visit "/"
-    find(".leaflet-marker-icon").click
+    find("[title='Bart Simpson']").click
   end
 
 end
