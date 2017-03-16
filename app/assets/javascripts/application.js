@@ -20,4 +20,4 @@
 //= require Leaflet.Instagram
 //= require leaflet.ajax
 //= require leaflet-vector-markers
-//= require_tree .
+//= require_tree ./application

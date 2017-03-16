@@ -1,13 +1,50 @@
-<%= content_tag heading_tag do %>
-  <%= fa_icon place.icon, base: "square" %>
-  <%= place.name %>
-  <br>
-  <small><%= place.type %></small>
-<% end %>
+<div class="place">
+  <%= content_tag heading_tag do %>
+    <%= fa_icon place.icon, base: "square" %>
+    <%= place.name %>
+    <br>
+    <small><%= place.type %></small>
+  <% end %>
 
-<pre><%= JSON.pretty_generate(place.as_json) %></pre>
+  <table class="table">
+    <tr>
+      <th>Address</th>
+      <td class="place-address" data-lat="<%= place.lat %>" data-lng="<%= place.lng %>">
+        <p><%= place.address %></p>
+      </td>
+    </tr>
 
-<%= form_for place, url: admin_review_path(place) do |form| -%>
-  <%= form.button "Accept", value: "accept", class: "btn btn-success" %>
-  <%= form.button "Reject", value: "reject", class: "btn btn-danger" %>
-<% end -%>
+    <% if place.description? %>
+      <tr>
+        <th>Description</th>
+        <td><%= place.description %></td>
+      </tr>
+    <% end %>
+
+    <% if place.phone? %>
+      <tr>
+        <th>Phone</th>
+        <td><%= place.phone %></td>
+      </tr>
+    <% end %>
+
+    <% if place.url? %>
+      <tr>
+        <th>URL</th>
+        <td><%= link_to place.url, place.url %></td>
+      </tr>
+    <% end %>
+
+    <% if place.notes? %>
+      <tr>
+        <th>Notes</th>
+        <td><%= place.notes %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= form_for place, url: admin_review_path(place) do |form| -%>
+    <%= form.button "Accept", value: "accept", class: "btn btn-success" %>
+    <%= form.button "Reject", value: "reject", class: "btn btn-danger" %>
+  <% end -%>
+</div>

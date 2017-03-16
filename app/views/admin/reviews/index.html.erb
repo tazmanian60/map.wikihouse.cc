@@ -5,7 +5,7 @@
 <% else -%>
   <ul class="reviews">
     <% @places.each do |place| -%>
-      <li class="review"><%= render "place", place: place, heading_tag: "h2" %></li>
+      <li><%= render "place", place: place, heading_tag: "h2" %></li>
     <% end -%>
   </ul>
 <% end -%>
