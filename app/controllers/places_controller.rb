@@ -26,7 +26,8 @@ class PlacesController < ApplicationController
   private
 
     def place_params
-      params.require(controller_name.singularize).permit!
+      params.require(controller_name.singularize)
+            .permit(:name, :description, :lat, :lng, :address, :phone, :url, :notes)
     end
 
     def klass
