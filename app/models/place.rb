@@ -5,15 +5,17 @@ class Place < ApplicationRecord
 
   workflow do
     state :awaiting_review do
-      event :accept, :transitions_to => :accepted
-      event :reject, :transitions_to => :rejected
+      event :accept, transitions_to: :accepted
+      event :reject, transitions_to: :rejected
+    end
+
+    state :accepted do
+      event :reject, transitions_to: :rejected
     end
 
     state :rejected do
-      event :accept, :transitions_to => :accepted
+      event :accept, transitions_to: :accepted
     end
-
-    state :accepted
   end
 
   def self.policy_class

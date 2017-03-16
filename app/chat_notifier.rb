@@ -6,7 +6,7 @@ class ChatNotifier
   end
 
   def place_created(place)
-    notify "#{place.name} (#{place.type}) added #{urls.admin_review_url(place)}"
+    notify "#{place.name} (#{place.type}) added #{urls.admin_place_url(place)}"
   end
 
   private

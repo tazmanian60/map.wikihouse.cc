@@ -1,0 +1,32 @@
+<h1><%= params[:state].humanize %> submissions</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Type</th>
+      <th>Submitted</th>
+    </tr>
+  </thead>
+
+  <% @places.each do |place| %>
+    <tr>
+      <td>
+        <%= link_to place.name, admin_place_path(place) %>
+      </td>
+
+      <td>
+        <%= place.address %>
+      </td>
+
+      <td>
+        <%= fa_icon place.icon, text: place.type %>
+      </td>
+
+      <td title="<%= place.created_at %>">
+        <%= time_ago_in_words place.created_at %> ago
+      </td>
+    </tr>
+  <% end %>
+</table>

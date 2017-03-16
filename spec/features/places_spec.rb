@@ -21,7 +21,7 @@ describe "places" do
     expect(page).to have_content("Thanks")
 
     place = Place.order("created_at desc").first
-    visit admin_reviews_path
+    visit admin_root_path
 
     click_button "Accept"
     expect(place.reload).to be_accepted

@@ -2,10 +2,17 @@
   <%= content_tag heading_tag do %>
     <%= place.name %>
     <br>
-    <small><%= fa_icon place.icon, base: "square", text: place.type %></small>
+    <small><%= fa_icon place.icon, text: place.type %></small>
   <% end %>
 
   <table class="table">
+    <% unless place.awaiting_review? %>
+    <tr>
+      <th>State</th>
+      <td><%= place.workflow_state.humanize %></td>
+    </tr>
+    <% end %>
+
     <tr>
       <th>Address</th>
       <td class="place-address" data-lat="<%= place.lat %>" data-lng="<%= place.lng %>">
@@ -42,8 +49,9 @@
     <% end %>
   </table>
 
-  <%= form_for place, url: admin_review_path(place) do |form| -%>
-    <%= form.button "Accept", value: "accept", class: "btn btn-success" %>
-    <%= form.button "Reject", value: "reject", class: "btn btn-danger" %>
+  <%= form_for place, url: admin_place_state_path(place) do |form| -%>
+    <% place.current_state.events.keys.map(&:to_s).each do |event| %>
+      <%= form.button event.humanize, value: event, class: event_button_class(event) %>
+    <% end %>
   <% end -%>
 </div>

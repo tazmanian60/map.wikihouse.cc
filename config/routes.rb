@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   resource :embed
 
   namespace :admin do
-    root to: redirect("/admin/reviews", status: 302)
-    resources :reviews, only: %w(index update show)
+    root to: redirect("/admin/places?state=awaiting_review", status: 302)
+
+    resources :places, only: %w(index show)
+    resources :place_states, only: %w(update)
   end
 
   get 'terms',  to: 'static#terms'
