@@ -1,4 +1,26 @@
+#container {
+  display: flex;
+}
+
+#sidebar {
+  width: 200px;
+  padding: 10px;
+  background: #f0f0f0;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
 #map {
+  flex: 1;
+  height: 100vh;
+  display: block;
+
   .leaflet-popup-content {
     max-height: 300px;
     overflow-y: auto;
@@ -7,7 +29,6 @@
       word-wrap: break-word;
     }
   }
-
 
   .leaflet-popup-instagram a.leaflet-popup-close-button {
     width: 25px;

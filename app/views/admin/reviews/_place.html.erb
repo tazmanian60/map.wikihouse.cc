@@ -1,0 +1,13 @@
+<%= content_tag heading_tag do %>
+  <%= fa_icon place.icon, base: "square" %>
+  <%= place.name %>
+  <br>
+  <small><%= place.type %></small>
+<% end %>
+
+<pre><%= JSON.pretty_generate(place.as_json) %></pre>
+
+<%= form_for place, url: admin_review_path(place) do |form| -%>
+  <%= form.button "Accept", value: "accept", class: "btn btn-success" %>
+  <%= form.button "Reject", value: "reject", class: "btn btn-danger" %>
+<% end -%>

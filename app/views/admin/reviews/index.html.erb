@@ -1,0 +1,11 @@
+<h1>Submissions awaiting review</h1>
+
+<% if @places.empty? -%>
+  <p>All done!</p>
+<% else -%>
+  <ul class="reviews">
+    <% @places.each do |place| -%>
+      <li class="review"><%= render "place", place: place, heading_tag: "h2" %></li>
+    <% end -%>
+  </ul>
+<% end -%>

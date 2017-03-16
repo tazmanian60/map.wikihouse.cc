@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #f0f0f0;
+  line-height: 1.4;
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans;
+
+  > .container {
+    background: white;
+    padding: 15px;
+  }
+}

@@ -1,37 +1,30 @@
-<div class="container" id="form">
-  <%= simple_form_for @place do |f| %>
+<%= simple_form_for @place, html: { class: "new_place" } do |f| %>
+  <h2>2. Please add details</h2>
 
-    <h2>2. Please add details</h2>
-    <fieldset>
-      <legend>Basic Details</legend>
-      <% if @place.class == Contributor %>
-        <%= f.input :name, autofocus: true %>
-        <%= f.input :url, as: :url, label: "URL" %>
-        <%= f.input :phone %>
-        <%= f.input :description, label: "Your involvement in WikiHouse" %>
-      <% elsif @place.class == Build %>
-        <%= f.input :name, autofocus: true, label: "Build Name" %>
-        <%= f.input :url, as: :url, label: "URL" %>
-        <%= f.input :description %>
-      <% end %>
-    </fieldset>
+  <fieldset>
+    <legend>Basic Details</legend>
+    <% if @place.class == Contributor %>
+      <%= f.input :name, autofocus: true %>
+      <%= f.input :url, as: :url, label: "URL" %>
+      <%= f.input :phone %>
+      <%= f.input :description, label: "Your involvement in WikiHouse" %>
+    <% elsif @place.class == Build %>
+      <%= f.input :name, autofocus: true, label: "Build Name" %>
+      <%= f.input :url, as: :url, label: "URL" %>
+      <%= f.input :description %>
+    <% end %>
+  </fieldset>
 
-    <fieldset>
-      <legend>Location</legend>
-      <%= f.input :address, as: :string, input_html: { id: 'place_address' } %>
-      <div id="geocomplete-map"></div>
-      <p class="hint">You can drag the marker above to position it more accurately</p>
-      <%= f.input :lat, input_html: { id: 'place_lat' }, as: :hidden %>
-      <%= f.input :lng, input_html: { id: 'place_lng' }, as: :hidden %>
-    </fieldset>
+  <fieldset>
+    <legend>Location</legend>
+    <%= f.input :address, as: :string, input_html: { id: 'place_address' }, hint: "You can drag the map marker to position it more accurately" %>
+    <div id="geocomplete-map"></div>
+    <%= f.input :lat, input_html: { id: 'place_lat' }, as: :hidden %>
+    <%= f.input :lng, input_html: { id: 'place_lng' }, as: :hidden %>
+  </fieldset>
 
-    <h2>3. Anything else you'd like to add?</h2>
+  <h2>3. Anything else you'd like to add?</h2>
+  <%= f.input :notes %>
 
-    <fieldset>
-      <%= f.input :notes %>
-    </fieldset>
-
-    <%= f.submit "Submit for review", class: 'button' %>
-  <% end %>
-
-</div>
+  <%= f.button :submit, "Submit for review" %>
+<% end %>

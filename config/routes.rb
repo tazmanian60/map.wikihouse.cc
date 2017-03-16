@@ -1,18 +1,17 @@
 Rails.application.routes.draw do
-  get 'terms', to: 'static#terms'
-  get 'thanks', to: 'static#thanks', as: 'thanks'
-
-  resources :places do
-    member do
-      patch 'transition'
-    end
-  end
-
-  resources :contributors
-  resources :builds
+  resources :places,       only: %w(new index)
+  resources :contributors, only: %w(new create)
+  resources :builds,       only: %w(new create)
 
   resource :embed
 
+  namespace :admin do
+    root to: redirect("/admin/reviews", status: 302)
+    resources :reviews, only: %w(index update show)
+  end
+
+  get 'terms',  to: 'static#terms'
+  get 'thanks', to: 'static#thanks', as: 'thanks'
+
   root to: 'places#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= render "layouts/head" %>
     <title>WikiHouse Map</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag '//maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDtjm6A_jnLaGU2uA9oHTg6n1YYCmss8P8', 'data-turbolinks-eval': 'false' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <%= yield %>
