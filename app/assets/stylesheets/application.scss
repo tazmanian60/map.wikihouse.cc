@@ -10,7 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require normalize
  *= require leaflet
  *= require Leaflet.Instagram
  *= require MarkerCluster
@@ -21,9 +20,8 @@
  *= require_self
  */
 
-* {
-  box-sizing: border-box;
-}
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 a {
   color: #6699CC;
@@ -63,29 +61,35 @@ body {
   padding: 20px;
 }
 
-div.flex-container {
-  @media (min-width: 480px) {
-    display: flex;
-  }
-}
-
-div.flex-container > div {
-  padding: 10px;
-  flex: 1;
-}
-
 .container {
   max-width: 900px;
   margin: 0 auto;
-  /*height: 100vh;*/
   display: block;
 }
 
-.active .button {
-  &, &:hover {
-    background: #6699CC;
-    i.fa-stack-1x {
-      color: #6699CC;
+.place-type-list {
+  > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  .place-type-list {
+    display: flex;
+
+    > li {
+      margin-left: 5px;
+      margin-right: 5px;
+      flex: 1;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -93,13 +97,30 @@ div.flex-container > div {
 .button {
   background: #A09E84;
   height: 100%;
-  padding: 10px 20px;
+  padding: 15px;
   color: #FFF;
   border: none;
+  display: block;
+
+  p {
+    margin: 10px 0 0 0;
+  }
+
   &:hover {
     background: darken(#A09E84, 5%);
+    text-decoration: none;
+    color: white;
+
     i.fa-stack-1x {
       color: darken(#A09E84, 5%);
+    }
+  }
+
+  &.active {
+    background: #6699CC;
+
+    i.fa-stack-1x {
+      color: #6699CC;
     }
   }
 }
@@ -133,7 +154,6 @@ form {
 
 fieldset {
   margin-bottom: 1em;
-  padding: 1em;
 
   input, textarea {
     padding: 4px 6px;
@@ -186,4 +206,9 @@ a {
   color: #AAA;
   margin: 0.5em 0;
   font-style: italic;
+}
+
+abbr[title] {
+  border: 0;
+  text-decoration: underline dotted;
 }

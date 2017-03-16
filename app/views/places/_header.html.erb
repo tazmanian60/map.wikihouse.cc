@@ -4,26 +4,20 @@
 
   <h2>1. What would you like to add to the map?</h2>
 
-  <div class="flex-container">
-
-    <div>
-      <%= link_to new_contributor_path, class: ('active' if request.path == new_contributor_path) do %>
-        <div class="button">
-          <%= fa_stacked_icon Contributor.icon, base: "square", text: 'Contributor' %>
-          <p>Individuals and organisations who are developing or building a WikiHouse</p>
-        </div>
+  <ul class="place-type-list">
+    <li>
+      <%= link_to new_contributor_path, class: "button #{'active' if request.path == new_contributor_path}" do %>
+        <%= fa_stacked_icon Contributor.icon, base: "square", text: 'Contributor' %>
+        <p>Individuals and organisations who are developing or building a WikiHouse</p>
       <% end %>
-    </div>
+    </li>
 
-    <div>
-      <%= link_to new_build_path, class: ('active' if request.path == new_build_path) do %>
-        <div class="button">
-          <%= fa_stacked_icon Build.icon, base: "square", text: 'Build' %>
-          <p>WikiHouse projects which have produced either a model or a full scale prototype or pilot</p>
-        </div>
+    <li>
+      <%= link_to new_build_path, class: "button #{'active' if request.path == new_build_path}" do %>
+        <%= fa_stacked_icon Build.icon, base: "square", text: 'Build' %>
+        <p>WikiHouse projects which have produced either a model or a full scale prototype or pilot</p>
       <% end %>
-    </div>
-
-  </div>
+    </li>
+  </ul>
 
 </div>

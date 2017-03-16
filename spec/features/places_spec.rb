@@ -13,7 +13,7 @@ describe "places" do
     fill_in "Address", with: "Springfield, USA"
 
     page.execute_script "$('#place_address').trigger('geocode')"
-    expect(page).to have_selector("#place_lat") { |field|
+    expect(page).to have_selector("#place_lat", visible: false) { |field|
       field.value.present?
     }
 
