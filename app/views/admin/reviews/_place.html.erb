@@ -1,9 +1,8 @@
 <div class="place">
   <%= content_tag heading_tag do %>
-    <%= fa_icon place.icon, base: "square" %>
     <%= place.name %>
     <br>
-    <small><%= place.type %></small>
+    <small><%= fa_icon place.icon, base: "square", text: place.type %></small>
   <% end %>
 
   <table class="table">
