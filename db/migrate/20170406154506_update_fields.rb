@@ -1,7 +1,7 @@
 class UpdateFields < ActiveRecord::Migration[5.0]
   def change
     Place.find_each do |place|
-      place.update!(
+      place.update_columns(
         data: place.data.merge(
           "description" => place.description,
           "links"       => place.url,
