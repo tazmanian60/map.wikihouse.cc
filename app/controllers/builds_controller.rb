@@ -1,2 +1,0 @@
-class BuildsController < PlacesController
-end

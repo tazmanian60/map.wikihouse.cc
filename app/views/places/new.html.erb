@@ -1,8 +1,26 @@
 <div class="container">
-  <%= render "places/header" %>
+  <h1><%= link_to "Map", root_path %> / Add a Place</h1>
 
-  <% unless @place.class == Place -%>
-    <%= simple_form_for @place, html: { class: "new_place" } do |f| %>
+  <h2>1. What would you like to add to the map?</h2>
+
+  <ul class="place-type-list">
+    <li>
+      <%= link_to new_place_path(type: "Contributor"), class: ('active' if @place.is_a?(Contributor)) do %>
+        <%= fa_stacked_icon Contributor.icon, base: "square", text: 'Contributor' %>
+        <p>Individuals and organisations who are developing or building a WikiHouse</p>
+      <% end %>
+    </li>
+
+    <li>
+      <%= link_to new_place_path(type: "Build"), class: ('active' if @place.is_a?(Build)) do %>
+        <%= fa_stacked_icon Build.icon, base: "square", text: 'Build' %>
+        <p>WikiHouse projects which have produced either a model or a full scale prototype or pilot</p>
+      <% end %>
+    </li>
+  </ul>
+
+  <% if params[:type] -%>
+    <%= simple_form_for @place, url: places_path(type: params[:type]), as: :place do |f| %>
       <h2>2. Please add details</h2>
 
       <%= render "basic_fields", form: f %>

@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  resources :places,       only: %w(new index)
-  resources :contributors, only: %w(new create)
-  resources :builds,       only: %w(new create)
-
+  resources :places, only: %w(new index create)
   resource :embed
 
   namespace :admin do

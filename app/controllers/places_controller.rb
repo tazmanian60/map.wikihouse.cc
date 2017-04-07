@@ -1,4 +1,5 @@
 class PlacesController < ApplicationController
+  TYPES = %w(Build Contributor)
 
   def index
     @places = Place.with_accepted_state.all
@@ -25,13 +26,16 @@ class PlacesController < ApplicationController
 
   private
 
-    def place_params
-      params.require(controller_name.singularize)
-            .permit(:name, :lat, :lng, :address, :notes, *klass.fields)
-    end
+  def place_params
+    params.require(controller_name.singularize)
+          .permit(:name, :lat, :lng, :address, :notes, *klass.fields)
+  end
 
-    def klass
-      controller_name.singularize.classify.constantize
+  def klass
+    if TYPES.include?(params[:type])
+      params[:type].constantize
+    else
+      Place
     end
-
+  end
 end

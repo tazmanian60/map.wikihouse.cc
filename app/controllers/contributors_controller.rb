@@ -1,2 +1,0 @@
-class ContributorsController < PlacesController
-end

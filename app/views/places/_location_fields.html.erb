@@ -1,7 +1,7 @@
 <fieldset>
   <legend>Location</legend>
-  <%= form.input :address, as: :string, input_html: { id: 'place_address' }, hint: "You can drag the map marker to position it more accurately" %>
+  <%= form.input :address, as: :string, hint: "You can drag the map marker to position it more accurately" %>
   <div id="geocomplete-map"></div>
-  <%= form.input :lat, input_html: { id: 'place_lat', data: { geo: "lat" } }, as: :hidden %>
-  <%= form.input :lng, input_html: { id: 'place_lng', data: { geo: "lng" } }, as: :hidden %>
+  <%= form.input :lat, input_html: { data: { geo: "lat" } }, as: :hidden %>
+  <%= form.input :lng, input_html: { data: { geo: "lng" } }, as: :hidden %>
 </fieldset>
