@@ -1,6 +1,6 @@
 module ApplicationHelper
   def markdown(text)
-    Loofah.scrub_fragment(Kramdown::Document.new(text).to_html, :strip)
+    Loofah.scrub_fragment(Kramdown::Document.new(text.to_s).to_html, :strip)
           .to_s
           .html_safe
   end
