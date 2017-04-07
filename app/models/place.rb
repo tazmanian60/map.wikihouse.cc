@@ -26,6 +26,29 @@ class Place < ApplicationRecord
     raise NotImplementedError, "specify the name of a font-awesome icon"
   end
 
+  class_attribute :fields
+  self.fields = []
+
+  def self.field(name)
+    name = name.to_s
+    self.fields += [name]
+
+    define_method name do
+      data[name]
+    end
+
+    define_method "#{name}=" do |value|
+      data[name] = value
+    end
+
+    define_method "#{name}?" do
+      data[name].present?
+    end
+  end
+
+  field :description
+  field :links
+
   def icon
     self.class.icon
   end
@@ -39,5 +62,13 @@ class Place < ApplicationRecord
     # 2: ~ 500m-1km precision
     # 3: ~ 50-100m precision
     [lat,lng].map{|f| sprintf("%.#{precision}f", f)}
+  end
+
+  def data
+    super || (self.data = {})
+  end
+
+  def link_list
+    links.to_s.split(/[\s,]+/)
   end
 end

@@ -3,16 +3,7 @@
 
   <fieldset>
     <legend>Basic Details</legend>
-    <% if @place.class == Contributor %>
-      <%= f.input :name, autofocus: true %>
-      <%= f.input :url, as: :url, label: "URL" %>
-      <%= f.input :phone %>
-      <%= f.input :description, label: "Your involvement in WikiHouse" %>
-    <% elsif @place.class == Build %>
-      <%= f.input :name, autofocus: true, label: "Build Name" %>
-      <%= f.input :url, as: :url, label: "URL" %>
-      <%= f.input :description %>
-    <% end %>
+    <%= render "#{@place.class.name.underscore}_fields", form: f %>
   </fieldset>
 
   <fieldset>

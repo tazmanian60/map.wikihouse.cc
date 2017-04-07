@@ -20,26 +20,10 @@
       </td>
     </tr>
 
-    <% if place.description? %>
-      <tr>
-        <th>Description</th>
-        <td><%= place.description %></td>
-      </tr>
-    <% end %>
-
-    <% if place.phone? %>
-      <tr>
-        <th>Phone</th>
-        <td><%= place.phone %></td>
-      </tr>
-    <% end %>
-
-    <% if place.url? %>
-      <tr>
-        <th>URL</th>
-        <td><%= link_to place.url, place.url %></td>
-      </tr>
-    <% end %>
+    <tr>
+      <th>Contents</th>
+      <td><%= render_place place %></td>
+    </tr>
 
     <% if place.notes? %>
       <tr>

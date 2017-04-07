@@ -1,5 +1,6 @@
 class Build < Place
-  validates_presence_of :name
+  field :stage
+  field :contributors
 
   def self.icon
     "home"

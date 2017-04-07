@@ -1,0 +1,5 @@
+<%= form.input :name, autofocus: true, label: "Project name" %>
+<%= form.input :description, as: :text, hint: "Keep it brief", input_html: { maxlength: 1000 } %>
+<%= form.input :stage, as: :select, collection: %w(Design Build Complete), include_blank: false %>
+<%= form.input :contributors, label: "Core contributors", hint: "Full names, separated by commas" %>
+<%= form.input :links, as: :text, label: "Links", hint: "One on each line. Include design files, website, social media profiles, etc." %>

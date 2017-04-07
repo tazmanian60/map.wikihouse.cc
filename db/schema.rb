@@ -10,25 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315112043) do
+ActiveRecord::Schema.define(version: 20170406154506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "places", force: :cascade do |t|
     t.string   "name"
-    t.text     "description"
     t.float    "lat"
     t.float    "lng"
     t.text     "address"
-    t.string   "phone"
-    t.string   "url"
     t.string   "type"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "workflow_state"
     t.text     "notes"
-    t.text     "images"
     t.jsonb    "data"
     t.index ["type"], name: "index_places_on_type", using: :btree
     t.index ["workflow_state"], name: "index_places_on_workflow_state", using: :btree

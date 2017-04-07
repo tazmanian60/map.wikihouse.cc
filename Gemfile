@@ -28,6 +28,9 @@ gem 'slack-notifier'
 gem 'workflow'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'bootstrap-sass'
+gem 'rinku', require: "rails_rinku"
+gem 'kramdown'
+gem 'loofah'
 
 group :production do
   gem 'rails_12factor'

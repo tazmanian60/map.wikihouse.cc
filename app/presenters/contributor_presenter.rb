@@ -1,0 +1,2 @@
+class ContributorPresenter < PlacePresenter
+end
