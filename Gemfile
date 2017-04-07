@@ -32,6 +32,7 @@ gem 'rinku', require: "rails_rinku"
 gem 'kramdown'
 gem 'loofah'
 gem 'paperclip'
+gem 'aws-sdk', '~> 2.3.0'
 
 group :production do
   gem 'rails_12factor'
