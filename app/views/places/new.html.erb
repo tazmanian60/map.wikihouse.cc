@@ -1,4 +1,17 @@
 <div class="container">
   <%= render "places/header" %>
-  <%= render "places/form" unless @place.class == Place %>
+
+  <% unless @place.class == Place -%>
+    <%= simple_form_for @place, html: { class: "new_place" } do |f| %>
+      <h2>2. Please add details</h2>
+
+      <%= render "basic_fields", form: f %>
+      <%= render "location_fields", form: f %>
+
+      <h2>3. Anything else you'd like to add?</h2>
+      <%= f.input :notes %>
+
+      <%= f.button :submit, "Submit for review" %>
+    <% end %>
+  <% end -%>
 </div>

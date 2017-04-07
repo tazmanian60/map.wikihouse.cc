@@ -37,5 +37,7 @@
     <% place.current_state.events.keys.map(&:to_s).each do |event| %>
       <%= form.button event.humanize, value: event, class: event_button_class(event) %>
     <% end %>
+
+    <%= link_to "Edit", edit_admin_place_path(place), class: "btn btn-default" %>
   <% end -%>
 </div>

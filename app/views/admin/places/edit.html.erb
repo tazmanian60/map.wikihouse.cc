@@ -1,0 +1,11 @@
+<h1>
+  Edit <%= @place.name %>
+  <br>
+  <small><%= fa_icon @place.icon, text: @place.type %></small>
+</h1>
+
+<%= simple_form_for @place, as: :place, url: admin_place_path(@place) do |f| %>
+  <%= render "places/basic_fields", form: f %>
+  <%= render "places/location_fields", form: f %>
+  <%= f.button :submit %>
+<% end %>

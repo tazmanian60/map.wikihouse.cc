@@ -1,21 +1,11 @@
 document.addEventListener("turbolinks:load", function() {
-  var options = {
+  $("input#place_address").geocomplete({
     map: "#geocomplete-map",
+    details: "fieldset",
+    detailsAttribute: "data-geo",
     markerOptions: {
       draggable: true
-    }
-  };
-
-  function setPlace(location) {
-    $("#place_lat").val(location.lat());
-    $("#place_lng").val(location.lng());
-  }
-
-  $("input#place_address").geocomplete(options)
-    .bind("geocode:result", function(event, result){
-      setPlace(result.geometry.location)
-    })
-    .bind("geocode:dragged", function(event, latLng){
-      setPlace(latLng)
-    });
+    },
+    location: [$("input#place_lat").val(), $("input#place_lng").val()]
+  });
 });
