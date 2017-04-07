@@ -28,7 +28,7 @@ class PlacesController < ApplicationController
 
   def place_params
     params.require(controller_name.singularize)
-          .permit(:name, :lat, :lng, :address, :notes, *klass.fields)
+          .permit(:name, :lat, :lng, :address, :notes, :image, *klass.fields)
   end
 
   def klass

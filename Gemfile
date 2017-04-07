@@ -31,6 +31,7 @@ gem 'bootstrap-sass'
 gem 'rinku', require: "rails_rinku"
 gem 'kramdown'
 gem 'loofah'
+gem 'paperclip'
 
 group :production do
   gem 'rails_12factor'

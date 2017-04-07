@@ -8,6 +8,7 @@ describe "places" do
     fill_in "Name", with: "Bart Simpson"
     fill_in "Bio", with: "Hello, I'm Bart"
     fill_in "Links", with: "http://example.com"
+    attach_file "Image", Rails.root.join("app/assets/images/wikihouse-logo.svg")
     fill_in_address "Springfield, USA"
 
     submit_form
@@ -18,6 +19,7 @@ describe "places" do
     open_place("Bart Simpson") do
       expect(page).to have_content("Hello, I’m Bart")
       expect(page).to have_link("http://example.com")
+      expect(page).to have_selector("img")
     end
   end
 
@@ -29,6 +31,7 @@ describe "places" do
     select "Complete", from: "Stage"
     fill_in "Core contributors", with: "Rose, Blake"
     fill_in "Links", with: "http://example.com"
+    attach_file "Image", Rails.root.join("app/assets/images/wikihouse-logo.svg")
     fill_in_address "Slough, UK"
 
     submit_form
@@ -41,6 +44,7 @@ describe "places" do
       expect(page).to have_content("Stage: Complete")
       expect(page).to have_content("Contributors: Rose, Blake")
       expect(page).to have_link("http://example.com")
+      expect(page).to have_selector("img")
     end
   end
 

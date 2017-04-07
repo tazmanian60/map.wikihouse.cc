@@ -49,6 +49,9 @@ class Place < ApplicationRecord
   field :description
   field :links
 
+  has_attached_file :image, styles: { normal: "300x300>" }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
   def icon
     self.class.icon
   end

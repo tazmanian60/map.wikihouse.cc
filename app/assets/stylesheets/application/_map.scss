@@ -27,6 +27,8 @@
   }
 
   .leaflet-popup-content {
+    min-width: 150px;
+    max-width: 300px;
     max-height: 300px;
     overflow-y: auto;
     margin: 15px;

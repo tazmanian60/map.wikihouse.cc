@@ -1,4 +1,5 @@
 <fieldset>
   <legend>Basic Details</legend>
   <%= render "places/#{@place.class.name.underscore}_fields", form: form %>
+  <%= form.input :image, as: :file %>
 </fieldset>

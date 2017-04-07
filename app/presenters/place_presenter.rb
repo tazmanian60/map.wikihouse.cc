@@ -12,4 +12,10 @@ class PlacePresenter < Presenter
       )
     )
   end
+
+  def image
+    return unless image?
+
+    h.content_tag(:p, h.image_tag(super.url(:normal)))
+  end
 end
