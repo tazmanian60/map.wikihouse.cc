@@ -8,10 +8,14 @@ module ApplicationHelper
   def render_place(place)
     presenter = Object.const_get("#{place.class.name}Presenter")
 
-    render(
-      partial: "places/#{place.class.name.underscore}",
-      formats: [:html],
-      object: presenter.new(place, controller.view_context)
+    content_tag(
+      :div,
+      render(
+        partial: "places/#{place.class.name.underscore}",
+        formats: [:html],
+        object: presenter.new(place, controller.view_context)
+      ),
+      class: "place #{place.class.name}"
     )
   end
 end

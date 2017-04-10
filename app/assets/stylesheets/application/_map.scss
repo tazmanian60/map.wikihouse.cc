@@ -37,19 +37,6 @@
       max-width: 100%;
       word-wrap: break-word;
     }
-
-    :last-child {
-      margin-bottom: 0;
-    }
-
-    p {
-      margin: 10px 0;
-    }
-
-    ul {
-      padding: 0;
-      list-style-type: none;
-    }
   }
 
   .leaflet-popup-instagram a.leaflet-popup-close-button {
@@ -73,5 +60,57 @@
 .marker-Build {
   svg path {
     fill: #975150;
+  }
+}
+
+.place {
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &.Contributor {
+    $image-size: 60px;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .image {
+      margin: 0;
+      width: $image-size;
+
+      img {
+        height: $image-size;
+        width: $image-size;
+        object-fit: cover;
+        border-radius: 100%;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+
+  &.Build {
+    .meta {
+      margin: -5px 0 10px 0;
+
+      p {
+        margin: 0;
+      }
+
+      strong {
+        font-weight: normal;
+      }
+    }
   }
 }

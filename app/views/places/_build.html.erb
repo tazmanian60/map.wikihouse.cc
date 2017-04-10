@@ -1,12 +1,18 @@
+<%= build.title %>
+
 <%= build.image %>
 <%= build.description %>
 
-<% if build.stage? %>
-  <p><strong>Stage</strong>: <%= build.stage %></p>
-<% end %>
+<% if build.stage? || build.contributors? %>
+  <div class="meta">
+    <% if build.stage? %>
+      <p><strong>Stage</strong>: <%= build.stage %></p>
+    <% end %>
 
-<% if build.contributors? %>
-  <p><strong>Contributors</strong>: <%= build.contributors %></p>
+    <% if build.contributors? %>
+      <p><strong>Contributors</strong>: <%= build.contributors %></p>
+    <% end %>
+  </div>
 <% end %>
 
 <%= build.link_list %>
