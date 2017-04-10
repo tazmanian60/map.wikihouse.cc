@@ -7,7 +7,7 @@
     <li>
       <%= link_to new_place_path(type: "Contributor"), class: ('active' if @place.is_a?(Contributor)) do %>
         <%= fa_stacked_icon Contributor.icon, base: "square", text: 'Contributor' %>
-        <p>Individuals and organisations who are developing or building a WikiHouse</p>
+        <p>Individuals, organisations or teams who are contributing to the ongoing R&D and development of the WikiHouse project.</p>
       <% end %>
     </li>
 
