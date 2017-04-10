@@ -14,7 +14,7 @@
     <li>
       <%= link_to new_place_path(type: "Build"), class: ('active' if @place.is_a?(Build)) do %>
         <%= fa_stacked_icon Build.icon, base: "square", text: 'Build' %>
-        <p>WikiHouse projects which have produced either a model or a full scale prototype or pilot</p>
+        <p>WikiHouse builds that are in one of the following stages; design, production, or completed projects.  </p>
       <% end %>
     </li>
   </ul>
