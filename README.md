@@ -16,10 +16,8 @@ something fails.
 ## Copying production database locally
 
 ```
-$ dropdb wikihouse-map_development
 $ heroku pg:backups:download
-$ pg_restore --verbose --clean --jobs=4 --disable-triggers --no-acl --no-owner -h localhost -d wikihouse-map latest.dump
-$ rm latest.dump
+$ pg_restore --verbose --clean --jobs=4 --disable-triggers --no-acl --no-owner -h localhost -d wikihouse-map_development latest.dump
 ```
 
 ## Day-to-day development
